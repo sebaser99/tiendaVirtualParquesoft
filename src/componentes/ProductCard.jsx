@@ -7,9 +7,10 @@ export const ProductCard = ({producto, addCart, showAddCart = true, allDescripti
         <div key={producto.id} className={`product-card ${conditionalClass} ${showCantIndicator ? 'relative' : ''}`}>
             <Link to={`/productos/${producto.id}`} className='link'>
             <div style={{height: '230px'}} className='flex-col-center'>
-                <img src={producto.image} alt={producto.title} className='product-image'/>
+                <img src={producto.images[0]} alt={producto.title} className='product-image'/>
             </div>
-            <p className={allDescription ? '' : 'text-overflow'}>{producto.title}</p>
+            <h2 style={{color: 'var(--secondary-color)'}} className={allDescription ? '' : 'text-overflow'}>{producto.title}</h2>
+            <p className={allDescription ? '' : 'text-overflow'}>{producto.description}</p>
             <h3 style={{textAlign: 'center'}} className={showAddCart ? '' : 'text-orange'}>${producto.price}</h3>
             </Link>
             {

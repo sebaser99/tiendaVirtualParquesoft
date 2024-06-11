@@ -11,7 +11,7 @@ export const Navbar = () => {
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/productos">Productos</Link></li>
             <li><Link to="/contacto">Contacto</Link></li>
-            <li> <Link style={{display: 'flex', alignItems: 'center'}} to="/carrito"><i className="fas fa-cart-shopping"></i></Link></li>
+            <li> <Link style={{display: 'flex', alignItems: 'center', color: 'var(--green-lime)'}} to="/carrito"><i className="fas fa-cart-shopping"></i></Link></li>
         </ul>
     </div>
    

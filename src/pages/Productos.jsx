@@ -6,15 +6,15 @@ export const Productos = () => {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-      console.log(productos.length, productos)
-      if(productos.length === 0){
-        fetch('https://fakestoreapi.com/products')
-        .then((res) => res.json())
-        .then((data) => setProductos(data));
+      const fetchProductos = ()=> {
+          fetch('https://dummyjson.com/products')
+          .then((res) => res.json())
+          .then((data) => setProductos(data.products));
       }
+      fetchProductos();
       }, []);
 
-
+      console.log(productos)
   return (
     <>
       <main>

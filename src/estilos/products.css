@@ -18,8 +18,12 @@
 .product-card p {
     margin-top: 0px;
 }
-.product-card:hover h3 {
+
+.product-card h3 {
     color: var(--green-lime);
+}
+.product-card:hover h3 {
+    color: var(--secondary-color);
 }
 .product-image {
     width: 200px;

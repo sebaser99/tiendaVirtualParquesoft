@@ -11,7 +11,7 @@ export const ProductDetail = () => {
     const {addCart} = useContext(CartContext);
 
      useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${id}`)
+        fetch(`https://dummyjson.com/products/${id}`)
         .then((res) => res.json())
         .then((data) => setProduct(data));
      }, [id])

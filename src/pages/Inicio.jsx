@@ -8,9 +8,9 @@ export const Inicio = () => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products?limit=4&sort=asc')
+    fetch('https://dummyjson.com/products?limit=4&skip=7')
       .then((res) => res.json())
-      .then((data) => setProductos(data));
+      .then((data) => setProductos(data.products));
   }, []);
 
   return (

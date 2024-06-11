@@ -13,7 +13,7 @@ export const Carrito = () => {
     }, 0);
 
     setTotalPagar(newTotal);
-  }, [cart]); 
+  }, [cart, setTotalPagar]); 
 
   useEffect(() => {
     cart.forEach(product => product.cant === 0 ? setProductInZero(true) : setProductInZero(false))
@@ -45,7 +45,7 @@ export const Carrito = () => {
                               <button onClick={()=>changeCantItem(product.product.id, -1)}>-</button><p className="cant">{product.cant}</p><button onClick={()=>changeCantItem(product.product.id, 1)}>+</button>
                           </div>
                           <h3>Total</h3>
-                          <span style={{display: 'block'}}>{product.cant * product.product.price}</span>
+                          <span style={{display: 'block', color: 'var(--green-lime)', fontSize: '1.3rem', fontWeight: '700'}}>{(product.cant * product.product.price).toFixed(2)}</span>
                           <span onClick={()=> deleteItem(product.product.id)} className="trash-container"><i className="fas fa-trash trash"></i></span> 
                         </div>
                       </div>
