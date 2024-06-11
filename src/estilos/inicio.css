@@ -1,0 +1,51 @@
+.banner {
+    width: 100%;
+    height: 300px;
+    background-image: url('../../public/assets/images/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.home-catego {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-height: 500px;
+    margin-top: 40px;
+    max-width: 800px;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.home-catego div {
+    margin: 0px 20px;
+}
+
+.home-catego h2 {
+    margin-top: 0px;
+    color: var(--secondary-color);
+}
+
+.home-catego a {
+    text-decoration: none;
+    color: white;
+}
+
+.home-catego img {
+    max-width: 400px; /* La imagen tiene un ancho máximo del contenedor */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    margin-right: 10px; /* Añade un margen a la derecha de la imagen */
+}
+
+.products-related {
+    margin-top: 60px;
+}
+
+.products-related-title {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
